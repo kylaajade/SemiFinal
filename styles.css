@@ -1,0 +1,437 @@
+body {
+    background-color: #f8f9fa; /* Light background color */
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #343a40; /* Darker text color */
+}
+
+.modal-header {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white;
+}
+
+.modal-footer {
+    background-color: #f1f1f1; /* Light footer color */
+}
+
+.table {
+    background-color: #343a40; /* Dark table background */
+    color: white; /* White text color */
+}
+
+.table th, .table td {
+    vertical-align: middle; /* Center align table cells */
+}
+
+.table img {
+    border-radius: 50%; /* Circular profile images */
+}
+
+.btn-primary {
+    background-color: #007bff; /* Bootstrap primary color */
+    border-color: #007bff; /* Match border color */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    border-color: #0056b3; /* Match border color */
+}
+
+.btn-warning {
+    background-color: #ffc107; /* Bootstrap warning color */
+    border-color: #ffc107; /* Match border color */
+}
+
+.btn-danger {
+    background-color: #dc3545; /* Bootstrap danger color */
+    border-color: #dc3545; /* Match border color */
+}
+
+.btn-danger:hover {
+    background-color: #c82333; /* Darker red on hover */
+    border-color: #bd2130; /* Match border color */
+}
+
+.form-control {
+    border-radius: 0.25rem; /* Rounded corners for inputs */
+}
+.profile-section {
+    padding: 10px;
+    text-align: center;
+}
+.sidebar.closed .profile-section {
+    opacity: 0; /* Make the profile section semi-transparent when collapsed */
+    transform: scale(0.7); /* Shrink the profile section */
+    }
+.profile-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: opacity 0.3s ease;
+}
+
+        /* Add margin above and below the title */
+        .h2 {
+            margin-bottom: 50px; /* Add margin at the bottom */
+            font-size: 30px;     /* Optional: Adjust the font size to your preference */
+            color: white;        /* Optional: Set the text color */
+            text-align: center;  /* Optional: Center the text */
+        }
+
+        .top-right {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .top-right .date {
+            margin-right: 15px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .top-right .logout-btn {
+            font-size: 18px;
+            color: #333;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            border: none;
+            background: none;
+            padding: 0;
+        }
+        
+        .top-right .logout-btn i {
+            margin-right: 5px;
+            border: none;
+        }
+        /* Icon styling */
+        .top-right i {
+            margin-right: 5px;
+        }
+/* Sidebar Styles */
+.sidebar {
+    height: 100%;
+    width: 240px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #343a40;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: width 0.3s ease;
+    justify-content: space-between;
+}
+/* Style for Icons and Text */
+.sidebar .nav-item {
+    display: flex;
+    align-items: center;
+}
+.sidebar.closed .nav-item .text {
+    display: none; /* Hide the text when sidebar is collapsed */
+}
+.sidebar .nav-item .icon {
+    display: block; /* Show icons always */
+}
+.sidebar.closed {
+    width: 60px; /* Smaller width when closed */
+}
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: white;
+    display: flex; /* Flexbox for icon and text */
+    align-items: center; /* Center icons and text vertically */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.sidebar .actions-section a span {
+    display: inline-block; /* Keep text visible */
+    margin-left: 10px;
+    transition: opacity 0.3s ease;
+}
+
+.sidebar.closed .actions-section a span {
+    display: none; /* Hide text when sidebar is closed */
+}
+.sidebar.closed + .content {
+    margin-left: 60px; /* When sidebar is closed, reduce content margin */
+}
+.sidebar .actions-section a i {
+    font-size: 20px;
+}
+
+/* Sidebar Toggle Button */
+#sidebar-toggle {
+    background-color:transparent;
+    color: white;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 30px;
+    right: 22px; /* Place the button outside the sidebar */
+    border-radius: 0;
+    z-index: 1000;
+}
+
+#sidebar-toggle i {
+    font-size: 24px;
+}
+
+#sidebar-toggle a:hover {
+    background-color:none;
+}
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+.sidebar a:hover {
+    background-color: #495057;
+}
+.sidebar .profile-section {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+.sidebar .profile-section img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.sidebar .profile-section h5,
+.sidebar .profile-section p {
+    margin: 0;
+}
+.sidebar .section-title {
+    color: #ddd;
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+.content {
+    margin-left: 240px; /* Default sidebar width */
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+}
+.sidebar .section {
+    padding: 15px;
+}
+.sidebar .section a {
+    font-size: 16px;
+}
+
+/* Make the row containing the overview section transparent, borderless, and no shadow */
+.content .row {
+    background-color: transparent !important; /* Ensure no background for the row */
+    border: none; /* Remove any borders */
+    box-shadow: none !important; /* Remove any shadow for the row */
+    padding: 0; /* Optionally adjust padding if needed */
+}
+
+/* Make all cards transparent with shadow effect */
+.card {
+    background-color: transparent !important; /* Make the background of the card transparent */
+    border: none; /* Remove any border of the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow for card visibility */
+    border-radius: 15px; /* Optional: rounded corners for cards */
+}
+
+/* Card Body - Ensure the card body is transparent to keep the shadow */
+.card-body {
+    background-color: transparent !important;  /* Make the card body background transparent */
+    padding: 15px; /* Adjust padding if needed */
+}
+
+/* Card Titles - Set them to be black */
+.card-title {
+    color: #343a40;  /* Set the text color of the title to black */
+}
+
+/* Optional: Set background colors for specific cards */
+.card.bg-purple
+.card.bg-info
+.card.bg-success {
+    background-color: none ; /* Green */
+}
+
+
+/* Table Container Styling */
+.table-container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.table-responsive {
+    border-radius: 10px;
+    overflow: hidden;
+}
+.verified {
+    background-color: rgb(255, 255, 255);
+    color: rgb(59, 59, 59);
+}
+.not-verified {
+    background-color: #f8d7da;
+    color: rgb(124, 48, 56);
+}
+
+/* Status Badge Styling */
+.status-badge {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
+/* Semi-transparent horizontal line style */
+.semi-transparent-line {
+    border: none;
+    height: 1px;
+    background-color: rgba(105, 105, 105, 0.2);  /* Semi-transparent black color */
+    margin: 40px 0;
+    box-shadow: 0 0 10px rgba(32, 31, 31, 0.4);
+}
+
+/* Profile Image Styling */
+.profile-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+/* Font Awesome Icon Temporary Profile Image */
+.default-icon {
+    margin-bottom: 15px;
+}
+
+/* Full Name Styling */
+.user-full-name {
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+/* Make the user's email italic and set font size */
+.email {
+    font-style: italic;     /* Makes the text italic */
+    font-size: 16px;        /* Set the font size for the email (adjust as needed) */
+    color: white;           /* Optional: Set text color */
+}
+
+/* Make all cards have a transparent background and add shadow to the card */
+.card {
+    background-color: transparent !important; /* Make the background of the card transparent */
+    border: none; /* Remove the border of the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow for card visibility */
+    border-radius: 10px;
+}
+
+/* Card Titles - Set them to be black */
+.card-title {
+    color: #343a40;  /* Set the text color of the title to black */
+}
+
+/* Make the card body background transparent, so only the card has shadow */
+.card-body {
+    background-color: transparent !important;  /* Remove background from card body */
+    padding: 15px; /* Adjust padding if needed */
+}
+
+/* Specific Card Titles */
+.card.text-white.bg-success .card-title, 
+.card.text-white.bg-info .card-title, 
+.card.text-white.bg-purple .card-title {
+    color: #343a40; /* Set text color of the title to black */
+    background-color: transparent !important; 
+    border: none; /* Remove the border from card titles to maintain transparency */
+    
+}
+
+/* Profile Image Styling */
+.profile-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+/* Font Awesome Icon Temporary Profile Image */
+.default-icon {
+    margin-bottom: 15px;
+}
+
+/* Full Name Styling */
+.user-full-name {
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+/* Style the actions section container */
+.actions-section {
+    text-align: center;       /* Center the links horizontally */
+    margin-top: 50px;         /* Add 50px margin above */
+}
+
+.bottom-actions {
+    margin-top: auto; /* This pushes the links to the bottom */
+    margin-top: 200px;
+}
+
+/* Style for individual links (optional) */
+.actions-section a {
+    margin: 10px 0;           /* Add vertical spacing between links (adjust as needed) */
+    text-decoration: none;    /* Remove underline from links */
+    color: white;             /* Set link color */
+    font-size: 15px;          /* Optional: Adjust font size */
+}
+
+.actions-section a:hover {
+    background-color: #495057; /* Optional: Add background color on hover */
+}
+.bottom-actions a {
+    margin: 10px 0;        /* Add vertical spacing between links */
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+/* Hover effect for bottom links */
+.bottom-actions a:hover {
+    background-color: #495057;
+}
+@media (max-width: 768px) {
+    .sidebar {
+        display: none; /* Hide sidebar on small screens */
+    }
+    .sidebar.open {
+        display: block; /* Show sidebar when 'open' class is added */
+    }
+}
+/* Ensure student table takes full width */
+#student-table-container {
+    width: 100%;
+    padding: 20px;
+}
+
+/* Transition effects for smoother switching */
+#main-content, #student-table-container {
+    transition: opacity 0.3s ease;
+}
+
+.d-none {
+    display: none !important;
+}
